@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="technical.css">
+    <title>HTML</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header id="nav-header">Bases du HTML</header>
+
+        <ul>
+            <li><a class="nav-link" href="#introduction"></a>Introduction</li>
+            <li><a class="nav-link" href="#balises"></a>Balises</li>
+            <li><a class="nav-link" href="#imbriquer"></a>Imbriquer des éléments</li>
+            <li><a class="nav-link" href="#vides"></a>Les éléments vides</li>
+            <li><a class="nav-link" href="#structure"></a>Structure d'un doc HTML</li>
+            <li><a class="nav-link" href="#titre"></a>Les titres</li>
+            <li><a class="nav-link" href="#paragraphe"></a>Les paragraphes</li>
+            <li><a class="nav-link" href="#lien"></a>Les liens</li>
+            <li><a class="nav-link" href="#reference"></a>Référence</li>
+        </ul>
+    </nav>  
+    
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <article>
+                <p><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>angage
+                    (HTML) est le code utilisé pour struturer une page web et son contenu. Ce dernier pourra être composé de titres, 
+                    d'ensemble de paragraphes, de listes, d'images, etc.</p>
+                <p>HTML n'est pas réellement un langage de programmation, il s'agit plutôt d'un langage de balises qui définissent la struture de la page web.
+                    HTML est composé d'une série d'éléments, utilisés pour entourer ou envelopper les diverses parties du contenu, afin qu'elles apparaissent
+                    d'une certaines façon.</p>
+                <p>Les balises entourantes peuvent être rendues par un mot ou une image lien hypertexte vers quelque chose d'autre, la police en italique
+                    ou gras, plus grand ou plus petite et ainsi de suite. Par exemple, si l'on souhaite que "mon chat est très grincheux" s'affiche sur la
+                    page web, nous indiquerons qu'il s'agit d'un paragraphe en l'entourant des balises paragraphe :</p>
+                    <code class="codes"><span class="token tag">
+                    <span class="token punctuation"><</span>p</span><span class="token punctuation">></span>mon chat est très grincheux<span class="token punctuation"><</span>p</span><span class="token punctuation">></span></span></code>
+            </article>
+        </section>
+
+        <section class="main-section" id="balises">
+                <header>Balises</header>
+                <article>
+                    <p>L'élément paragraphe ci-dessus est composé :</p>
+                        <li>D'une balise ouvrante, qui se compose du nom de l'élément (ici "p") entre deux chevrons. Cela indique le début de l'élément, ici le début du paragraphe.</li>
+                        <li>Le contenu, qui se trouve entre la balise ouvrante et la balise fermante, ici "mon chat est grincheux".</li>
+                        <li>La balise fermante, qui se compose de chevrons et du nom de l'élément auquel on rajoute une barre oblique avant le nom de l'élément. Cela indique la fin de l'élément.</li>
+                    <p>Les éléments peuvent aussi contenir des attributs <code><span class="token punctuation"><</span>class</span><span class="token punctuation">></span></code> ou <code><span class="token punctuation"><</span>div</span><span class="token punctuation">></span></code> qui contiennent 
+                        des informations supplémentaires sur l'élément et que l'on ne souhaite pas afficher avec le contenu. Ces attributs permettent d'identifier l'élément et de l'utiliser pour modifier la mise en forme ou autre.</p>
+                    <p>Un attribut doit toujours avoir :</p>
+                        <li>Un espace entre l'attribut et le nom de l'élément ou l'attribut précédent s'il y en a plusieurs.</li>
+                        <li>Un nom (celui de l'attribut) suivi d'un signe égal (=).</li>
+                        <li>De guillemets anglais (") pour encadrer la valeur de l'attribut.</li>
+                </article>
+        </section>
+        <section class="main-section" id="imbriquer">
+                <header>Imbriquer des éléments</header>
+                <article>
+                    <p>Vous pouvez placer des éléments au sein d'autres éléments, c'est ce qu'on appelle l'<strong>imbrication</strong>. Par exemple, si l'on souhaite que le chat
+                    soit <strong>très</strong> grincheux, on place le mot "très" dans un élément <code><span class="token punctuation"><</span>strong</span><span class="token punctuation">></span></code> ce qui signifie
+                que le mot sera fortement mis en relief.</p>
+                    <code class="codes"><span class="token punctuation"><</span>p</span><span class="token punctuation">></span>mon chat est <span><</span><span>strong</span><span>></span>très<span><</span><span>/strong</span><span>></span> grincheux<span class="token punctuation"><</span>p</span><span class="token punctuation">></span></span></code>
+
+                    <p>Toutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Lorsque l'on ouvre deux élements, il est important de les fermer dans l'ordre d'ouverture, comme sur l'exemple ci-dessus.
+                        Ainsi, les éléments doivent être ouverts et fermés correctement de façon à ce qu'ils soient correctement à l'intérieur ou à l'extérieur les uns des autres. </p>
+                </article>
+        </section>
+
+        <section class="main-section" id="vides">
+            <header>Les éléments vides</header>
+            <article>
+                <p>Certains éléments n'ont pas de contenu. Ces éléments sont appelés <strong>éléments vides</strong>. Prenons l'élément <span><</span>img<span>></span> comme exemple :</p>
+                <code class="codes"><span class="token tag">
+                <span class="token punctuation"><</span>img src="images/firefox-icon.png</span><span class="token punctuation">/></span></code>
+                <p>Cet élément contient deux attributs mais pas de balises ouvrantes et fermantes. Celles-ci sont remplacées par une balise auto-fermante. L'élement image n'embarque pas de contenu,
+                    son but est d'intégrer une image dans la page HTML, à l'endroit où l'élément est placé.</p>
+            </article>
+
+        <section class="main-section" id="structure">
+            <header>Structure d'un document HTML</header>
+            <article>
+                <p>Pour l'instant, nous avons vu quelques éléments HTML de base. Séparément, ils ne sont pas très utile. En les combinant, on peut créer une page HTML complète.</p>
+                    <div class="codes">
+                    <code><span class="token punctuation"><</span>!DOCTYPE html<span>></span></code> : Les doctypes étaient utilisés pour dire qu'un document était du HTML valide et détecter les erreurs de balisage.<br>
+                    <code><span class="token punctuation"><</span>html<span>></span> <span><</span>/html<span>></span></code> : Cet élément encadre tout le contenu de la page, il est parfois appelé élement racine.<br>
+                    <code><span class="token punctuation"><</span>head<span>></span> <span><</span>/head<span>></span></code> : Contient les mots-clés, description de la page, lien vers les fichiers CSS, etc qui ne sont pas affichés sur la page web.<br>
+                    <code><span class="token punctuation"><</span>body<span>></span> <span><</span>/body<span>></span></code> : Utilisé pour afficher sur la page web tout le contenu, qu'il s'agisse de texte, images, videos, etc.
+                    </div>
+            </article>
+        </section>
+
+        <section class="main-section" id="structure">
+            <header>Les titres</header>
+            <article>
+                <p>Ils permettent de structurer le contenu en fonctionnant comme dans un livre : du plus important au moins important. Il existe 6 niveaux de titres, de h1 à h6.
+                La plupart du temps, 3 niveaux de titres suffisent amplement :</p>
+                <div class="codes">
+                <code><span class="token punctuation"><</span>h1<span>></span>Mon titre principal<span><</span>/h1<span>></span></code><br>
+                <code><span class="token punctuation"><</span>h2<span>></span>Mon titre de section<span><</span>/h2<span>></span></code><br>
+                <code><span class="token punctuation"><</span>h3<span>></span>Mon sous-titre<span><</span>/h3<span>></span></code>
+                </div>
+            </article>
+        </section>
+
+        <section class="main-section" id="paragraphe">
+            <header>Les paragraphes</header>
+            <article>
+                <p>Les paragraphes contiennent du texte et ils sont très utilisés pour créer du contenu. Comme nous l'avons vus plus haut avec l'exemple du chat.
+                On peut utiliser du texte Lorem Ipsum lorsque l'on crée un site web pour s'exercer à la pratique. Il faut toutefois faire attention aux balises, que l'on ne peut
+                pas noter dans un paragraphes pour qu'elles soient affichées. Il est également important  de faire attention aux accents et à la ponctuation.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="lien">
+            <header>Les liens</header>
+            <article>
+                <p>Les liens sont très importants, ce sont eux qui font que le web est une toile sur laquelle on peut naviguer de page en page.
+                Pour créer un lien, il suffit d'utiliser l'élément <code><span><</span>a<span>></span></code> qui correspond à <strong>a</strong>ncre.
+                </p>
+                <div class="codes"><code><span><</span>a href="siteweb.com"<span>></span>Site Web !<span><</span>/a></code></div>
+                <p>Attention à ne pas oublier la partie avec <code>https://</code> ou <code>http://</code> qui représente le protocole utilisé. Une fois le lien créé, il est primordial de tester
+                la page en vérifiant que le lien fonctionne.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="reference">
+            <header>Référence</header>
+            <article>
+                <p>Vous pouvez retrouver plus d'informations ainsi que la page ayant servit de modèle pour cet exercice <a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML">en cliquant sur ce lien</a></p>
+                <br>
+                <a class="return" href="#introduction">haut de page</a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
